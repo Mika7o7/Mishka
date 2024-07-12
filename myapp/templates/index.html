@@ -1,0 +1,268 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Social Business</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="{% static 'js/popups.js' %}"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
+  </head>
+  <body>
+    
+    <div class="for_bg_imag">
+    <nav>
+        {% for item in data.NavBar %}
+        
+        <div class="logo">
+          <h2>{{ item.logo }}</h2>
+        </div>
+        <div id="nav-links" class="nav-links">
+        <ul id="myLinks">
+          <div class="sub_nav">
+            <li><a onclick="toLesson({{ item.first_qordinate }}, {{ item.first_qordinate }})" style="color: #d3d100; cursor: pointer;" href="#HISTORY">HISTORY'S MISHKA</a></li>
+            <li><a onclick="Course_program({{ item.second_qordinate }}, {{ item.second_qordinate }})" href="#ROADMAP">ROADMAP</a></li>
+            <li><a onclick="toContacts({{ item.three_qordinate }}, {{ item.three_qordinate }})" href="javascript:void(0);">{{ item.three_link }}</a></li>
+          </div>
+          <p onclick="closebar()">x</p>
+        </ul>
+        <a href="javascript:void(0);" id="icon" class="icon" onclick="openbar()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      {% endfor %}
+    </nav>
+    
+      
+      {% for item in data.InfoSection %}
+      <div class="info_container">
+        <!-- <p>{{ item.title }}</p> -->
+        <h1>olympic mishka</h1>
+        <img class="main-image" src="{{ item.photo.url }}" alt="Avatar">
+        <!-- <p class="sub_info_text">{{ item.sub_title }}</p> -->
+        <!-- <img src="./static/images/icons/icone.svg" alt="icone"> -->
+      </div>
+      <!-- <img class="rotaite-image" src="{{ item.bg_image.url }}" alt=""> -->
+      {% endfor %}
+    </div>
+
+    <section id="HISTORY">
+      <div class="info_container">
+        <img class="main-image" src="../static/images/oxak.png" alt="Avatar">
+        <h2 style="color: #F3F80E;">MISHKA'S HISTORY</h2>
+        <div class="text_sec">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Ipsum veniam, suscipit obcaecati ad autem vel aut? Dignissimos ipsam,
+              optio nobis officiis impedit esse doloribus earum facilis
+               nisi nihil corrupti ipsa.
+               Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Ipsum veniam, suscipit obcaecati ad autem vel aut? Dignissimos ipsam,
+              optio nobis officiis impedit esse doloribus earum facilis
+               nisi nihil corrupti ipsa.
+               Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Ipsum veniam, suscipit obcaecati ad autem vel aut? Dignissimos ipsam,
+              optio nobis officiis impedit esse doloribus earum facilis
+               nisi nihil corrupti ipsa.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Ipsum veniam, suscipit obcaecati ad autem vel aut? Dignissimos ipsam,
+                optio nobis officiis impedit esse doloribus earum facilis
+                 nisi nihil corrupti ipsa.
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Ipsum veniam, suscipit obcaecati ad autem vel aut? Dignissimos ipsam,
+              optio nobis officiis impedit esse doloribus earum facilis
+               nisi nihil corrupti ipsa.
+          </p>
+        </div>
+      </div>
+      
+    </section>
+
+
+    <section id="ROADMAP">
+      
+      <div class="info_container">
+        <h2 style="color: #F3F80E;">ROADMAP</h2>
+        <div class="text_sec">
+          <div class="white_sec">
+            <img class="nakr_1_edit" src="../static/images/nkar_1.png" alt="">
+          </div>
+          <div class="ggwp">
+            <div style="align-items: center; display: flex; justify-content: right; gap: 70px;">
+              <h6 style="display: inline; font-size: 30px; color: white;">Q1 January</h6>
+              <img class="poqr_oxak" src="../static/images/oxak.png" alt="">
+            </div>
+            <ul style="margin-top: 30px; width: 500px; display: flex; gap: 40px; flex-wrap: wrap;">
+              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste adipisci officiis nam beatae voluptates. Repellat maxime praesentium consequatur, illo animi, asperiores itaque ex dolorum neque minima soluta earum, aspernatur quisquam!</p></li>
+              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est exercitationem, tempora dolorum laborum esse animi praesentium nam. Neque unde architecto, a sit accusantium suscipit sed voluptatum qui blanditiis cupiditate dignissimos.</p></li>
+              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni laborum non distinctio porro minus voluptatem quo, aliquid molestiae! Sint at debitis quam recusandae, sit hic doloribus. Amet voluptatem quaerat veritatis!</p></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text_sec">
+          <div class="ggwp">
+            <div style="align-items: center; display: flex; justify-content: left; gap: 70px;">
+              <img class="poqr_oxak" src="../static/images/oxak.png" alt="">
+              <h6 style="display: inline; font-size: 30px; color: white;">Q2 April</h6>
+            </div>
+
+            <ul style="margin-top: 30px; width: 500px; display: flex; gap: 40px; flex-wrap: wrap;">
+              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste adipisci officiis nam beatae voluptates. Repellat maxime praesentium consequatur, illo animi, asperiores itaque ex dolorum neque minima soluta earum, aspernatur quisquam!</p></li>
+              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est exercitationem, tempora dolorum laborum esse animi praesentium nam. Neque unde architecto, a sit accusantium suscipit sed voluptatum qui blanditiis cupiditate dignissimos.</p></li>
+              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni laborum non distinctio porro minus voluptatem quo, aliquid molestiae! Sint at debitis quam recusandae, sit hic doloribus. Amet voluptatem quaerat veritatis!</p></li>
+            </ul>
+        </div>
+          <div class="white_sec">
+            <img class="nakr_2_edit" src="../static/images/nkar_2.png" alt="">
+          </div>
+          
+        </div>
+
+        <div class="text_sec">
+          <div class="white_sec">
+            <img class="nakr_3_edit" src="../static/images/nkar_3.png" alt="">
+          </div>
+          <div class="ggwp">
+              <div style="align-items: center; display: flex; justify-content: right; gap: 70px;">
+                <h6 style="display: inline; font-size: 30px; color: white;">Q1 January</h6>
+                <img class="poqr_oxak" src="../static/images/oxak.png" alt="">
+              </div>
+
+              <ul style="margin-top: 30px; width: 500px; display: flex; gap: 40px; flex-wrap: wrap;">
+                <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste adipisci officiis nam beatae voluptates. Repellat maxime praesentium consequatur, illo animi, asperiores itaque ex dolorum neque minima soluta earum, aspernatur quisquam!</p></li>
+                <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est exercitationem, tempora dolorum laborum esse animi praesentium nam. Neque unde architecto, a sit accusantium suscipit sed voluptatum qui blanditiis cupiditate dignissimos.</p></li>
+                <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni laborum non distinctio porro minus voluptatem quo, aliquid molestiae! Sint at debitis quam recusandae, sit hic doloribus. Amet voluptatem quaerat veritatis!</p></li>
+              </ul>
+          </div>
+        </div>
+
+
+        <div class="text_sec">
+          <div class="ggwp">
+            <div style="align-items: center; display: flex; justify-content: left; gap: 70px;">
+              <img class="poqr_oxak" src="../static/images/oxak.png" alt="">
+              <h6 style="display: inline; font-size: 30px; color: white;">Q2 April</h6>
+            </div>
+
+            <ul style="margin-top: 30px; width: 500px; display: flex; gap: 40px; flex-wrap: wrap;">
+              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste adipisci officiis nam beatae voluptates. Repellat maxime praesentium consequatur, illo animi, asperiores itaque ex dolorum neque minima soluta earum, aspernatur quisquam!</p></li>
+              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est exercitationem, tempora dolorum laborum esse animi praesentium nam. Neque unde architecto, a sit accusantium suscipit sed voluptatum qui blanditiis cupiditate dignissimos.</p></li>
+              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni laborum non distinctio porro minus voluptatem quo, aliquid molestiae! Sint at debitis quam recusandae, sit hic doloribus. Amet voluptatem quaerat veritatis!</p></li>
+            </ul>
+        </div>
+          <div class="white_sec">
+            <img class="nakr_4_edit" src="../static/images/nkar_4.png" alt="">
+          </div>
+          
+        </div>
+
+
+      </div>
+
+      </div>
+      
+      
+    </section>
+
+    <section>
+      <div class="info-wrapper">
+        <!-- <img class="main-image" src="../static/images/oxak.png" alt="Avatar"> -->
+        <h2 class="section-title">TOKENOMICS</h2>
+        <div class="header-row">
+          <h4 class="header-item">STEP</h4>
+          <h4 class="header-item">%</h4>
+        </div>
+    
+        <div class="content-item">
+          <h4 class="content-detail">STEP</h4>
+          <h4 class="content-detail">%</h4>
+        </div>
+    
+        <div class="content-item">
+          <h4 class="content-detail">STEP</h4>
+          <h4 class="content-detail">%</h4>
+        </div>
+    
+        <div class="content-item">
+          <h4 class="content-detail">STEP</h4>
+          <h4 class="content-detail">%</h4>
+        </div>
+    
+        <div class="content-item">
+          <h4 class="content-detail">STEP</h4>
+          <h4 class="content-detail">%</h4>
+        </div>
+    
+        <div class="content-item">
+          <h4 class="content-detail">STEP</h4>
+          <h4 class="content-detail">%</h4>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="info_container">
+        <!-- <img class="main-image" src="../static/images/oxak.png" alt="Avatar"> -->
+        <h2 style="color: #F3F80E;">OUR RESORSES</h2>
+          
+        <div class="content-item" style="width: 40%; display: flex; justify-content: center; align-items: center; ">
+            <h4 class="content-detail" style="color: wheat; font-weight: 500;">CHAT</h4>
+        </div>
+
+
+        <div class="content-item" style="width: 40%; display: flex; justify-content: center; align-items: center;">
+          <h4 class="content-detail" style="color: wheat; font-weight: 500;">CHANNEL</h4>
+        </div>
+
+        <div class="content-item" style="width: 40%; display: flex; justify-content: center; align-items: center;">
+          <h4 class="content-detail" style="color: wheat; font-weight: 500;">X</h4>
+        </div>
+
+      </div>
+      
+    </section>
+
+    
+    
+   
+    <footer>
+       <div style="display: flex; justify-content: space-between; padding: 0 40px 20px 40px;">
+        <img style="width: 200px;" src="../static/images/medal.png" alt="">
+
+
+        <div style="align-items: center; text-align: center; margin-top: 40px;">
+          <h2 style="color: #F3F80E; font-size: 50px;">$MISHKA</h2>
+          <div style="display: flex; justify-content: space-around; margin-top: 40px; gap: 30px;" >
+            <p style="font-weight: 600; font-size: 20px;"><a style="text-decoration: none; color: wheat;" href="#HISTORY">MISHKA'S HISTORY</a></p>
+            <p style="font-weight: 600; font-size: 20px;"><a style="text-decoration: none; color: wheat;" href="#ROADMAP">ROAD MAP</a></p>
+            <p style="font-weight: 600; font-size: 20px;">BUY ON STON.FI</p>
+          </div>
+        </div>
+
+
+        <img style="width: 200px;" src="../static/images/lacox _archuk.png" alt="">
+
+       </div>
+        <div></div>
+        <!-- scrole top -->
+        <button id="buttonUp" class="buttonUp">
+          <img  style="transform: rotate(180deg);" src="./static/images/icons/icone.svg" alt="">
+        </button>
+    <div class="copy-right">
+      <p>2024 All Rights Reserved</p>
+    </div>
+
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
