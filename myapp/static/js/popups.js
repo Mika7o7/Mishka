@@ -32,8 +32,13 @@ function closebar() {
   }
 
 const offset = 700;
+const offset1 = 600; // Замените на нужное значение
+const offset2 = 1300; // Замените на нужное значение
+const offset3 = 5000;
 
-
+const offset21 = 100; // Замените на нужное значение
+const offset22 = 1300; // Замените на нужное значение
+const offset23 = 2500;
 function toLesson(x, y) {
     window.scrollTo(x, y);
 };
@@ -58,6 +63,71 @@ window.onscroll = () => {
     document.querySelector('.buttonUp').classList.remove('buttonUp--active')
     
    }
+
+   // Для mishkaUp1
+  if (window.scrollY > offset1) {
+    document.querySelector('.mishkaUp1').classList.add('mishkaUp1--active');
+    // click
+    document.querySelector('.mishkaUp1').onclick = () => {
+      window.scrollTo(0, 0);
+    };
+  } else {
+    document.querySelector('.mishkaUp1').classList.remove('mishkaUp1--active');
+  }
+
+  // Для mishkaUp2
+  if (window.scrollY > offset2) {
+    document.querySelector('.mishkaUp2').classList.add('mishkaUp2--active');
+    // click
+    document.querySelector('.mishkaUp2').onclick = () => {
+      window.scrollTo(0, 0);
+    };
+  } else {
+    document.querySelector('.mishkaUp2').classList.remove('mishkaUp2--active');
+  }
+
+  // Для mishkaUp3
+  if (window.scrollY > offset3) {
+    document.querySelector('.mishkaUp3').classList.add('mishkaUp3--active');
+    // click
+    document.querySelector('.mishkaUp3').onclick = () => {
+      window.scrollTo(0, 0);
+    };
+  } else {
+    document.querySelector('.mishkaUp3').classList.remove('mishkaUp3--active');
+  }
+
+  if (window.scrollY > offset21) {
+    document.querySelector('.mishkaUp21').classList.add('mishkaUp21--active');
+    // click
+    document.querySelector('.mishkaUp21').onclick = () => {
+      window.scrollTo(0, 0);
+    };
+  } else {
+    document.querySelector('.mishkaUp21').classList.remove('mishkaUp21--active');
+  }
+
+  // Для mishkaUp2
+  if (window.scrollY > offset22) {
+    document.querySelector('.mishkaUp22').classList.add('mishkaUp22--active');
+    // click
+    document.querySelector('.mishkaUp22').onclick = () => {
+      window.scrollTo(0, 0);
+    };
+  } else {
+    document.querySelector('.mishkaUp22').classList.remove('mishkaUp22--active');
+  }
+
+  // Для mishkaUp3
+  if (window.scrollY > offset23) {
+    document.querySelector('.mishkaUp23').classList.add('mishkaUp23--active');
+    // click
+    document.querySelector('.mishkaUp23').onclick = () => {
+      window.scrollTo(0, 0);
+    };
+  } else {
+    document.querySelector('.mishkaUp23').classList.remove('mishkaUp23--active');
+  }
 };
 
 // carusel 
@@ -102,3 +172,5 @@ $(document).ready(function () {
     
 })
 });
+
+

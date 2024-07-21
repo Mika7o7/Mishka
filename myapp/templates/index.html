@@ -21,15 +21,15 @@
     <nav>
         {% for item in data.NavBar %}
         
-        <div class="logo">
-          <h2>{{ item.logo }}</h2>
+        <div>
+          <h2 class="logo">$MISHKA</h2>
         </div>
         <div id="nav-links" class="nav-links">
         <ul id="myLinks">
           <div class="sub_nav">
-            <li><a onclick="toLesson({{ item.first_qordinate }}, {{ item.first_qordinate }})" style="color: #d3d100; cursor: pointer;" href="#HISTORY">HISTORY'S MISHKA</a></li>
-            <li><a onclick="Course_program({{ item.second_qordinate }}, {{ item.second_qordinate }})" href="#ROADMAP">ROADMAP</a></li>
-            <li><a onclick="toContacts({{ item.three_qordinate }}, {{ item.three_qordinate }})" href="javascript:void(0);">{{ item.three_link }}</a></li>
+            <a class="linkss" href="#HISTORY">HISTORY'S MISHKA</a>
+            <a class="linkss" href="#ROADMAP">ROADMAP</a>
+            <a class="linkss" href="https://www.bybit.com/ru-RU/">DeDust</a>
           </div>
           <p onclick="closebar()">x</p>
         </ul>
@@ -44,8 +44,8 @@
       {% for item in data.InfoSection %}
       <div class="info_container">
         <!-- <p>{{ item.title }}</p> -->
-        <h1>olympic mishka</h1>
-        <img class="main-image" src="{{ item.photo.url }}" alt="Avatar">
+        <h1 class="main_text">olympic mishka</h1>
+        <img class="main-image" style="margin-bottom: 40px;" src="{{ item.photo.url }}" alt="Avatar">
         <!-- <p class="sub_info_text">{{ item.sub_title }}</p> -->
         <!-- <img src="./static/images/icons/icone.svg" alt="icone"> -->
       </div>
@@ -56,27 +56,17 @@
     <section id="HISTORY">
       <div class="info_container">
         <img class="main-image" src="../static/images/oxak.png" alt="Avatar">
-        <h2 style="color: #F3F80E;">MISHKA'S HISTORY</h2>
+        <h2>MISHKA'S HISTORY</h2>
+        <img id="mishkaUp1 mishkaUp21" class="mishkaUp1 mishkaUp21" style="left: -20px; top: 700px;" src="../static/images/history_mish.png" alt="">
         <div class="text_sec">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-             Ipsum veniam, suscipit obcaecati ad autem vel aut? Dignissimos ipsam,
-              optio nobis officiis impedit esse doloribus earum facilis
-               nisi nihil corrupti ipsa.
-               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-             Ipsum veniam, suscipit obcaecati ad autem vel aut? Dignissimos ipsam,
-              optio nobis officiis impedit esse doloribus earum facilis
-               nisi nihil corrupti ipsa.
-               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-             Ipsum veniam, suscipit obcaecati ad autem vel aut? Dignissimos ipsam,
-              optio nobis officiis impedit esse doloribus earum facilis
-               nisi nihil corrupti ipsa.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Ipsum veniam, suscipit obcaecati ad autem vel aut? Dignissimos ipsam,
-                optio nobis officiis impedit esse doloribus earum facilis
-                 nisi nihil corrupti ipsa.
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-             Ipsum veniam, suscipit obcaecati ad autem vel aut? Dignissimos ipsam,
-              optio nobis officiis impedit esse doloribus earum facilis
-               nisi nihil corrupti ipsa.
+          <p>The Return of Olympic Mishka: Digital Rebirth of Olympic Legend.
+            In 1980, a lovable bear named Mishka captured the hearts of millions as the mascot of the Moscow Olympic Games. With his warm smile and friendly demeanor, Mishka symbolized unity, bringing together athletes and spectators from around the world. As the games closed, an unforgettable image of Mishka shedding a tear touched the souls of over 5 million ticket holders and countless television viewers globally.
+            Fast forward to 2024, and Mishka is making a triumphant return, this time in the digital realm. The Olympic Mishka token (MISHKA) on the TON blockchain is breathing new life into this iconic symbol of unity and sportsmanship. But Mishka's digital revival represents more than just a single mascot's comeback - it marks the dawn of a new era for Olympic symbols.
+            As the first Olympic icon to make the leap into the world of blockchain, MISHKA is pioneering a digital renaissance for beloved Olympic mascots and symbols. This groundbreaking initiative paves the way for other cherished Olympic icons to find new life and relevance in the crypto realm, creating a virtual Olympus where the rich history of the Games merges seamlessly with cutting-edge technology.
+            Olympic Mishka's mission in this new digital age is to unite people in a space of freedom - the decentralized web. Just as the Olympic Games bring nations together in the spirit of friendly competition, MISHKA aims to create a global community united by shared values of openness, fairness, and mutual respect.
+            Each MISHKA token represents more than just a digital asset; it's a piece of history reimagined for the future. The initial supply of 5 million tokens pays homage to the approximate number of ticket holders from the 1980 Moscow Olympics, creating a symbolic link between past and present.
+            The Olympic Mishka token is not just about nostalgia; it's about carrying forward the values of unity and freedom into the digital age while opening doors for other Olympic icons to follow suit.
+            In a world that often feels divided, the MISHKA token on TON blockchain stands as a digital olive branch. It invites us to come together, much like athletes do every four years, to celebrate our shared humanity. As Mishka once united millions with a tear, MISHKA now has the potential to unite billions with a token - a small digital bear with a big mission: to create a global, borderless community in the free and open spaces of the blockchain world.
           </p>
         </div>
       </div>
@@ -87,36 +77,39 @@
     <section id="ROADMAP">
       
       <div class="info_container">
-        <h2 style="color: #F3F80E;">ROADMAP</h2>
+        <div class="road_div">
+          <h2 style="color: #F3F80E;">ROADMAP</h2>
+        </div>
+        <img id="mishkaUp2 mishkaUp22" class="mishkaUp2 mishkaUp22" style="right: 20px;" src="../static/images/road_mish.png" alt="">
+        <div class="info_wrapper">
         <div class="text_sec">
           <div class="white_sec">
             <img class="nakr_1_edit" src="../static/images/nkar_1.png" alt="">
           </div>
           <div class="ggwp">
-            <div style="align-items: center; display: flex; justify-content: right; gap: 70px;">
-              <h6 style="display: inline; font-size: 30px; color: white;">Q1 January</h6>
+            <div class="boxi">
+              <h6>Q1 - 2025</h6>
               <img class="poqr_oxak" src="../static/images/oxak.png" alt="">
             </div>
-            <ul style="margin-top: 30px; width: 500px; display: flex; gap: 40px; flex-wrap: wrap;">
-              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste adipisci officiis nam beatae voluptates. Repellat maxime praesentium consequatur, illo animi, asperiores itaque ex dolorum neque minima soluta earum, aspernatur quisquam!</p></li>
-              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est exercitationem, tempora dolorum laborum esse animi praesentium nam. Neque unde architecto, a sit accusantium suscipit sed voluptatum qui blanditiis cupiditate dignissimos.</p></li>
-              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni laborum non distinctio porro minus voluptatem quo, aliquid molestiae! Sint at debitis quam recusandae, sit hic doloribus. Amet voluptatem quaerat veritatis!</p></li>
+            <ul class="ult">
+              <li>Launch game</li>
+              <li>Beta testing</li>
+              <li>2000 Holders</li>
             </ul>
           </div>
         </div>
 
         <div class="text_sec">
           <div class="ggwp">
-            <div style="align-items: center; display: flex; justify-content: left; gap: 70px;">
+            <div class="boxi" style="justify-content: left;">
               <img class="poqr_oxak" src="../static/images/oxak.png" alt="">
-              <h6 style="display: inline; font-size: 30px; color: white;">Q2 April</h6>
+              <h6>Q2 - 2025</h6>
             </div>
-
-            <ul style="margin-top: 30px; width: 500px; display: flex; gap: 40px; flex-wrap: wrap;">
-              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste adipisci officiis nam beatae voluptates. Repellat maxime praesentium consequatur, illo animi, asperiores itaque ex dolorum neque minima soluta earum, aspernatur quisquam!</p></li>
-              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est exercitationem, tempora dolorum laborum esse animi praesentium nam. Neque unde architecto, a sit accusantium suscipit sed voluptatum qui blanditiis cupiditate dignissimos.</p></li>
-              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni laborum non distinctio porro minus voluptatem quo, aliquid molestiae! Sint at debitis quam recusandae, sit hic doloribus. Amet voluptatem quaerat veritatis!</p></li>
+            <ul class="ult">
+              <li>Start MISHKA farming in the game</li>
+              <li>3000 Holders+</li>
             </ul>
+            
         </div>
           <div class="white_sec">
             <img class="nakr_2_edit" src="../static/images/nkar_2.png" alt="">
@@ -129,32 +122,32 @@
             <img class="nakr_3_edit" src="../static/images/nkar_3.png" alt="">
           </div>
           <div class="ggwp">
-              <div style="align-items: center; display: flex; justify-content: right; gap: 70px;">
-                <h6 style="display: inline; font-size: 30px; color: white;">Q1 January</h6>
+              <div class="boxi" style="justify-content: left;">
+                <h6>Q3 - 2024</h6>
                 <img class="poqr_oxak" src="../static/images/oxak.png" alt="">
               </div>
-
-              <ul style="margin-top: 30px; width: 500px; display: flex; gap: 40px; flex-wrap: wrap;">
-                <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste adipisci officiis nam beatae voluptates. Repellat maxime praesentium consequatur, illo animi, asperiores itaque ex dolorum neque minima soluta earum, aspernatur quisquam!</p></li>
-                <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est exercitationem, tempora dolorum laborum esse animi praesentium nam. Neque unde architecto, a sit accusantium suscipit sed voluptatum qui blanditiis cupiditate dignissimos.</p></li>
-                <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni laborum non distinctio porro minus voluptatem quo, aliquid molestiae! Sint at debitis quam recusandae, sit hic doloribus. Amet voluptatem quaerat veritatis!</p></li>
+              <ul class="ult">
+                <li>Launch project</li>
+                <li>List on DeDust.io</li>
+                <li>300 Holders</li>
               </ul>
+              
           </div>
         </div>
 
 
         <div class="text_sec">
           <div class="ggwp">
-            <div style="align-items: center; display: flex; justify-content: left; gap: 70px;">
+            <div class="boxi">
               <img class="poqr_oxak" src="../static/images/oxak.png" alt="">
-              <h6 style="display: inline; font-size: 30px; color: white;">Q2 April</h6>
+              <h6>Q4 - 2024</h6>
             </div>
-
-            <ul style="margin-top: 30px; width: 500px; display: flex; gap: 40px; flex-wrap: wrap;">
-              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste adipisci officiis nam beatae voluptates. Repellat maxime praesentium consequatur, illo animi, asperiores itaque ex dolorum neque minima soluta earum, aspernatur quisquam!</p></li>
-              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est exercitationem, tempora dolorum laborum esse animi praesentium nam. Neque unde architecto, a sit accusantium suscipit sed voluptatum qui blanditiis cupiditate dignissimos.</p></li>
-              <li><p style="color: wheat; font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni laborum non distinctio porro minus voluptatem quo, aliquid molestiae! Sint at debitis quam recusandae, sit hic doloribus. Amet voluptatem quaerat veritatis!</p></li>
+            <ul class="ult">
+              <li>Small marketing strategy</li>
+              <li>500 holders</li>
+              <li>Start game development</li>
             </ul>
+            
         </div>
           <div class="white_sec">
             <img class="nakr_4_edit" src="../static/images/nkar_4.png" alt="">
@@ -162,7 +155,7 @@
           
         </div>
 
-
+      </div>
       </div>
 
       </div>
@@ -171,37 +164,45 @@
     </section>
 
     <section>
+      
       <div class="info-wrapper">
         <!-- <img class="main-image" src="../static/images/oxak.png" alt="Avatar"> -->
-        <h2 class="section-title">TOKENOMICS</h2>
+        <div style="display: flex; justify-content: center;">
+          <h2 class="section-title" style="margin-top: 0;">TOKENOMICS</h2>
+        </div>
         <div class="header-row">
-          <h4 class="header-item">STEP</h4>
-          <h4 class="header-item">%</h4>
+          <h4 class="header-item">• DeDust:</h4>
+          <h4 class="header-item">750,000 (15%)</h4>
         </div>
     
         <div class="content-item">
-          <h4 class="content-detail">STEP</h4>
-          <h4 class="content-detail">%</h4>
+          <h4 class="content-detail">• Ston.fi (soon):</h4>
+          <h4 class="content-detail">750,000 (15%)</h4>
         </div>
     
         <div class="content-item">
-          <h4 class="content-detail">STEP</h4>
-          <h4 class="content-detail">%</h4>
+          <h4 class="content-detail">• Team:</h4>
+          <h4 class="content-detail">1,000,000 (20%)</h4>
         </div>
     
         <div class="content-item">
-          <h4 class="content-detail">STEP</h4>
-          <h4 class="content-detail">%</h4>
+          <h4 class="content-detail">• Marketing:</h4>
+          <h4 class="content-detail">750,000 (15%)</h4>
         </div>
     
         <div class="content-item">
-          <h4 class="content-detail">STEP</h4>
-          <h4 class="content-detail">%</h4>
+          <h4 class="content-detail">• Airdrop:</h4>
+          <h4 class="content-detail">500,000 (10%)</h4>
         </div>
     
         <div class="content-item">
-          <h4 class="content-detail">STEP</h4>
-          <h4 class="content-detail">%</h4>
+          <h4 class="content-detail">• Game Farming:</h4>
+          <h4 class="content-detail">750,000 (15%)</h4>
+        </div>
+
+        <div class="content-item">
+          <h4 class="content-detail">• Community:</h4>
+          <h4 class="content-detail">500,000 (10%)</h4>
         </div>
       </div>
     </section>
@@ -210,19 +211,15 @@
     <section>
       <div class="info_container">
         <!-- <img class="main-image" src="../static/images/oxak.png" alt="Avatar"> -->
-        <h2 style="color: #F3F80E;">OUR RESORSES</h2>
+        <img id="mishkaUp3 mishkaUp23" class="mishkaUp3 mishkaUp23" style="left: -40px; top: 3750px;" src="../static/images/tocken_mish.png" alt="">
+        <h2 style="color: #F3F80E; margin: 0; margin-top: 30px;">OUR RESORSES</h2>
           
-        <div class="content-item" style="width: 40%; display: flex; justify-content: center; align-items: center; ">
-            <h4 class="content-detail" style="color: wheat; font-weight: 500;">CHAT</h4>
-        </div>
-
-
         <div class="content-item" style="width: 40%; display: flex; justify-content: center; align-items: center;">
-          <h4 class="content-detail" style="color: wheat; font-weight: 500;">CHANNEL</h4>
+          <h4 class="content-detail linkss">CHANNEL</h4>
         </div>
 
         <div class="content-item" style="width: 40%; display: flex; justify-content: center; align-items: center;">
-          <h4 class="content-detail" style="color: wheat; font-weight: 500;">X</h4>
+          <h4 class="content-detail linkss">X</h4>
         </div>
 
       </div>
@@ -233,31 +230,31 @@
     
    
     <footer>
-       <div style="display: flex; justify-content: space-between; padding: 0 40px 20px 40px;">
-        <img style="width: 200px;" src="../static/images/medal.png" alt="">
+       <div class="footer-wrapper">
+        <img class="medal" src="../static/images/medal.png" alt="">
 
 
-        <div style="align-items: center; text-align: center; margin-top: 40px;">
-          <h2 style="color: #F3F80E; font-size: 50px;">$MISHKA</h2>
-          <div style="display: flex; justify-content: space-around; margin-top: 40px; gap: 30px;" >
-            <p style="font-weight: 600; font-size: 20px;"><a style="text-decoration: none; color: wheat;" href="#HISTORY">MISHKA'S HISTORY</a></p>
-            <p style="font-weight: 600; font-size: 20px;"><a style="text-decoration: none; color: wheat;" href="#ROADMAP">ROAD MAP</a></p>
-            <p style="font-weight: 600; font-size: 20px;">BUY ON STON.FI</p>
+        <div class="footer_text">
+          <h2 class="logo">$MISHKA</h2>
+          <div class="links_container">
+            <a class="linkss" href="#HISTORY">MISHKA'S HISTORY</a>
+            <a class="linkss" href="#ROADMAP">ROAD MAP</a>
+            <a class="linkss" href="https://www.bybit.com/ru-RU/">DeDust</a>
+          </div>
+          <div class="copy-right">
+            <p>2024 All Rights Reserved</p>
           </div>
         </div>
 
 
-        <img style="width: 200px;" src="../static/images/lacox _archuk.png" alt="">
+        <img class="archuk" src="../static/images/lacox _archuk.png" alt="">
 
        </div>
-        <div></div>
-        <!-- scrole top -->
+        
         <button id="buttonUp" class="buttonUp">
           <img  style="transform: rotate(180deg);" src="./static/images/icons/icone.svg" alt="">
         </button>
-    <div class="copy-right">
-      <p>2024 All Rights Reserved</p>
-    </div>
+    
 
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

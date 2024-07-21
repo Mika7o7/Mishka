@@ -65,10 +65,7 @@ body {
 main {
   display: block;
 }
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
+
 hr {
   box-sizing: content-box;
   height: 0;
@@ -245,9 +242,16 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 140px 0 0;
+  padding: 0;
 }
 
+.info_wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
 .bagraund {
   position: absolute;
   z-index: -1;
@@ -336,9 +340,9 @@ swiper-slide img {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 40px;
   line-height: normal;
-  color: #022649;
+  color: #d3d100;
   font-weight: bold;
  
 }
@@ -545,7 +549,7 @@ footer {
   background-color: rgba(6, 29, 93, 0.9);
   font-size: 18px;
   color: white;
-  margin-top: 7rem;
+  margin-top: 17rem;
 }
 
 .footer-conteiner {
@@ -869,17 +873,7 @@ swiper-slide > img {
     text-align: center;
     line-height: 25px;
   }
-  
-  .info_container > .main-image {
-    vertical-align: middle;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    object-position: 23%;
-    border: 1px;
-    border-radius: 50%;
-    margin: 30px 0 10px 0;
-  }
+ 
   
 /* Carusel section  */
 
@@ -985,15 +979,7 @@ img {vertical-align: middle;}
   color: #022649;
   font-weight: bold;
 }
-h2 {
-  font-size: 15px;
-  max-width: 300px;
-  width: 100%;
-  line-height: normal;
-  color: #022649;
-  font-weight: bold;
- 
-}
+
 p {
   line-height: 1.5em;
   font-size: 13px;
@@ -1220,6 +1206,9 @@ swiper-slide img {
   object-fit: cover;
 }
 
+
+
+
 }
 
 @media only screen and (min-width: 600px) {
@@ -1243,15 +1232,6 @@ swiper-slide img {
   
 }
 
-@media only screen and (max-width: 300px) {
-  .info_container{
-    margin: 0;
-    padding: 0;
-  }
-
-  
-}
-
 
 
 
@@ -1261,7 +1241,6 @@ swiper-slide img {
   padding: 40px 40px;
   border-radius: 30px;
   width: 80%;
-  margin-top: 60px;
   display: flex;
   justify-content: space-between;
 }
@@ -1343,22 +1322,31 @@ swiper-slide img {
   transform: scale(1.1) rotate(180deg); /* Увеличение изображения при наведении */
 
 }
+.info_container > .main-image {
+  vertical-align: middle;
+  max-width: 500px;
+  width: 100%;
+  margin: 0;
+  margin-top: 40px;
+}
 
 
-h1 {
+.main_text {
   /* font-family: Arial, sans-serif;  */
   font-family: 'Staatliches', sans-serif; 
   font-size: 100px; /* Размер шрифта */
   color: #ffff00; /* Цвет текста */
   letter-spacing: 50px; /* Расстояние между буквами */
   text-transform: uppercase; /* Преобразование текста в верхний регистр */
-  margin: 20px 0; /* Отступы сверху и снизу */
+  margin-top: 50px; /* Отступы сверху и снизу */
 }
 
 
 .poqr_oxak {
-  width: 150px;
-  height: 100px;
+  max-width: 150px;
+  max-height: 100px;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -1403,8 +1391,12 @@ h1 {
 .info-wrapper {
   width: 80%;
   margin: 0 auto;
-  margin-top: 160px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   text-align: center; /* Центрируем содержимое */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .section-title {
@@ -1458,3 +1450,401 @@ h1 {
   left: 0;
 }
 
+.boxi {
+  display: flex;
+  justify-content: right;
+  gap: 70px;
+  align-items: center; 
+}
+h2 {
+  font-size: 40px;
+  line-height: normal;
+  color: #d3d100;
+  font-weight: bold;
+  margin: 40px 0;
+
+ 
+}
+h6 {
+  display: inline;
+  font-size: 60px; 
+  color: white;
+}
+
+.ult {
+  margin-top: 70px;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  gap: 50px; 
+  flex-direction: column;
+  text-align: center;
+}
+
+
+.ult > li{
+  font-size: 25px;
+  color: wheat;
+  font-weight: 400;
+}
+.medal {
+  max-width: 200px;
+  width: 100%;
+}
+.archuk {
+  max-width: 200px;
+  width: 100%;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 15px 20px;
+}
+
+.footer_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center; 
+  margin-top: 40px;
+}
+
+.links_container {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+}
+.linkss {
+  font-size: 20px;
+  color: #ffff;
+  font-weight: 500;
+
+}
+.linkss:hover {
+  color: #d3d100;
+  text-decoration: underline;
+}
+.logo {
+  font-size: 40px;
+  color: #d3d100;
+  font-weight: bold;
+  margin: 0;
+  text-decoration: underline;
+}
+
+.back_mish {
+  position: absolute;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.mishkaUp1 {
+  position: absolute;
+  max-width: 1200px;
+  width: 100%;
+  background-color: transparent;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(25px);
+
+}
+
+.mishkaUp2 {
+  position: absolute;
+  max-width: 1200px;
+  width: 100%;
+  background-color: transparent;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(25px);
+
+}
+
+.mishkaUp3 {
+  position: absolute;
+  max-width: 1200px;
+  width: 100%;
+  background-color: transparent;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(25px);
+
+}
+
+.mishkaUp1--active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mishkaUp2--active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mishkaUp3--active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+.road_div {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 140px; 
+  margin-bottom: 140px;
+}
+@media only screen and (max-width: 600px) {
+  .info_container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  footer {
+    margin-top: 7rem;
+  }
+  .road_div {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+  .mishkaUp21 {
+    position: absolute;
+    max-width: 1200px;
+    width: 100%;
+    background-color: transparent;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(25px);
+  
+  }
+  
+  .mishkaUp22 {
+    position: absolute;
+    max-width: 1200px;
+    width: 100%;
+    background-color: transparent;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(25px);
+  
+  }
+  
+  .mishkaUp23 {
+    position: absolute;
+    max-width: 1200px;
+    width: 100%;
+    background-color: transparent;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(25px);
+  
+  }
+  
+  .mishkaUp1--active {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(0);
+  }
+  
+  .mishkaUp2--active {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(0);
+  }
+  
+  .mishkaUp3--active {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  .mishkaUp21--active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .mishkaUp22--active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .mishkaUp23--active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .logo {
+    font-size: 20px;
+    color: #d3d100;
+    font-weight: bold;
+    margin: 0;
+    text-decoration: underline;
+  }
+
+  .links_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+  .linkss {
+    font-size: 10px;
+    color: #ffff;
+    font-weight: 500;
+  
+  }
+  .linkss:hover {
+    color: #d3d100;
+    text-decoration: underline;
+  }
+
+  .medal {
+    max-width: 100px;
+    width: 100%;
+  }
+  .copy-right{
+    font-size: 10px;
+  }
+  .archuk {
+    max-width: 100px;
+    width: 100%;
+  }
+  
+
+  .info_container > .main-image {
+    vertical-align: middle;
+    max-width: 300px;
+    width: 100%;
+    margin: 0;
+    margin-top: 40px;
+  }
+  .main_text {
+    font-size: 40px;
+    font-family: 'Staatliches', sans-serif; 
+    color: #ffff00; /* Цвет текста */
+    letter-spacing: 20px; /* Расстояние между буквами */
+    text-transform: uppercase; /* Преобразование текста в верхний регистр */
+    margin: 20px 0; /* Отступы сверху и снизу */
+
+  }
+  .text_sec {
+    background-color: rgba(6, 29, 93, 0.9);
+  
+    padding: 20px 20px;
+    border-radius: 30px;
+    width: 80%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  h2 {
+    margin: 40px 0;
+    font-size: 30px;
+  }
+  h6 {
+    display: inline;
+    font-size: 15px; 
+    color: white;
+  }
+
+  .boxi {
+    display: block;
+    align-items: center; 
+
+  }
+
+  .white_sec {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 30px 50px 0 50px;
+    /* overflow: hidden;  */
+    position: relative; 
+  }
+
+  .poqr_oxak {
+    max-width: 100px;
+    max-height: 80px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .nakr_1_edit {
+    width: 30%; /* Изображение будет занимать всю ширину контейнера */
+    position: absolute;
+    transition: transform 0.3s ease; /* Плавная анимация при наведении */
+  }
+  
+  .nakr_1_edit:hover {
+    transform: scale(1.5) rotate(40deg); /* Увеличение изображения при наведении */
+  
+  }
+
+  .ult {
+    margin-top: 30px;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    gap: 20px; 
+    flex-wrap: wrap;
+  }
+  .ult > li{
+    font-size: 10px;
+  }
+  .medal {
+    width: 100px;
+  }
+  
+  .nakr_2_edit {
+    width: 100%; /* Изображение будет занимать всю ширину контейнера */
+    position: relative;
+    bottom: 10px;
+    transition: transform 0.3s ease; /* Плавная анимация при наведении */
+  }
+  
+  .nakr_2_edit:hover {
+    transform: scale(1.5); /* Увеличение изображения при наведении */
+  
+  }
+
+  .nakr_1_edit {
+    width: 80%; /* Изображение будет занимать всю ширину контейнера */
+    position: relative;
+    bottom: 20px;
+    left: 0px;
+    transition: transform 0.3s ease; /* Плавная анимация при наведении */
+  }
+  
+  .nakr_1_edit:hover {
+    transform: scale(1.5) rotate(40deg); /* Увеличение изображения при наведении */
+  
+  }
+  .info-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center; /* Центрируем содержимое */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
