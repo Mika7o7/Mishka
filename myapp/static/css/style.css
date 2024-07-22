@@ -1573,6 +1573,8 @@ h6 {
   opacity: 0;
   transition: 1s;
   transform: translateY(25px);
+  left: -50px; 
+  top: 5400px;
 
 }
 
@@ -1652,6 +1654,8 @@ h6 {
     opacity: 0;
     transition: 1s;
     transform: translateY(25px);
+    left: -50px; 
+    top: 3750px;
   
   }
   
